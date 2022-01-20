@@ -13,23 +13,31 @@
             margin-bottom: 1rem;
         }
         .single-quiz{
-            
-        border: 1px solid red;
-        background: $colorWhite;
-        border-radius: 10px;
-        padding: 2rem;
-        .quiz-question{
-            padding: 1.5rem;
-        }
+            background: $colorWhite;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            .progress-bar{
+                display: flex;
+                width: 100%;
+                background-color: $colorLightGray;
+                height: 6px;
+                border-radius: 3px;
+                .progress-field{
+                    flex: 0;
+                    background-color: $colorSuccess;
+                    border-radius: 3px;
+                }
+            }
+            .quiz-question{
+                padding: 1.5rem;
+                font-size: 17px;
+            }
             .quiz-options{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                .checked-answer{
-                    background-color: $colorBlue;
-                    color: $colorWhite;
-                }
                 .correct-answer{
                     background-color: $colorSuccess;
                     color: $colorWhite;
@@ -38,58 +46,88 @@
                     background-color: $colorDanger;
                     color: $colorWhite;
                 }
-                & label{
-                    width: 50%;
+                .single-option{
+                    position: relative;
+                    min-width: 50%;
                     height: 60px;
                     border-radius: 5px;
+                    margin: .5rem 0;
+                    overflow: hidden;
+                    & input:checked ~ label{
+                        background-color: $colorBlue;
+                        color: $colorWhite;
+                    }
+                    & input {
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        border-radius: 50%;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        z-index: 1;
+                        border: 2px solid $darkGray;
+                        transition: 0.2s all linear;
+                        margin-right: 5px;
+                        position: absolute;
+                        top:50%;
+                        left:1rem;
+                        transform: translateY(-50%);
+                        &:checked {
+                            border: 2px solid $colorWhite;
+                            outline: unset;
+                            &::before{
+                                content: '✔';
+                                font-size: 1rem;
+                                color: $colorWhite;
+                                font-weight: 700;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            }
+                    }
+                    & label{
+                    height: 100%;
                     background-color: $colorLightGray2;
                     display: flex;
                     align-items: center;
-                    margin: .5rem 0;
                     position: relative;
-                    & input {
-                            -webkit-appearance: none;
-                            -moz-appearance: none;
-                            appearance: none;
-                            border-radius: 50%;
-                            width: 1.5rem;
-                            height: 1.5rem;
-                          
-                            border: 2px solid $darkGray;
-                            transition: 0.2s all linear;
-                            margin-right: 5px;
-                          
-                            position: absolute;
-                            top:50%;
-                            left:1rem;
-                            transform: translateY(-50%);
-                            &:checked {
-                                border: 2px solid $colorWhite;
-                                outline: unset;
-                                &::before{
-                                    content: '✔';
-                                    font-size: 1rem;
-                                    color: $colorWhite;
-                                    font-weight: 700;
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-                                }
-                              }
-                          }
-                    & span{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 0 1.5rem;
-                        width: 100%;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 3rem;
+                    width: 100%;
                     }
                 }
+                    
+                }
             }
-        }
+            & button{
+                outline: 0;
+                border: 0;
+                border-radius: 30px;
+                padding: 10px 20px;
+                font-size: 16px;
+                min-width: 128px;
+                margin:40px 10px 10px 10px;
+                font-family: inherit;
+                cursor: pointer;
+                &.previous-btn{
+                    border: 1px solid #6C6C6C;
+                }
+                &.primary-btn{
+                    background-image: $colorBtn;
+                    color: $colorWhite;
+                }
+                &:disabled{
+                    background: $colorLightGray;
+                    cursor: not-allowed;
+                }
+                
+            }
     }
     .course-content-side{
-        border: 1px solid red;
         border-radius: 10px;
         img{
             width: 100%;

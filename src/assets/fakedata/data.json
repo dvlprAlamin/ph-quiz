@@ -1,0 +1,42 @@
+[
+    {
+        "type": "mcq",
+        "options": [
+            "height ",
+            "weight",
+            "margin",
+            "padding"
+        ],
+        "_id": "60e45e87dee2cd5a2419537e",
+        "question": "<p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">Which CSS style rule does not affect the CSS box model?</span></p>",
+        "courseId": "60bb231b63d7fb6540bd1b90",
+        "module": "60e4588bdee2cd5a24195060",
+        "unitId": "60e45e87dee2cd5a2419537d"
+    },
+    {
+        "type": "mcq",
+        "options": [
+            "img, a, span, i",
+            "em, strong, small",
+            "input, button, p"
+        ],
+        "_id": "60e45e04dee2cd5a2419533b",
+        "question": "<p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">Which option has a block element?</span></p>",
+        "courseId": "60bb231b63d7fb6540bd1b90",
+        "module": "60e4588bdee2cd5a24195060",
+        "unitId": "60e45e04dee2cd5a24195339"
+    },
+    {
+        "type": "mcq",
+        "options": [
+            "height",
+            "width",
+            "margin-left"
+        ],
+        "_id": "60e45e04dee2cd5a2419533a",
+        "question": "<p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">Which CSS style rules can you apply to an inline element?</span></p>",
+        "courseId": "60bb231b63d7fb6540bd1b90",
+        "module": "60e4588bdee2cd5a24195060",
+        "unitId": "60e45e04dee2cd5a24195339"
+    }
+]
