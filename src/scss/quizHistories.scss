@@ -1,0 +1,48 @@
+@import './variable.scss';
+.quiz-histories-page{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:20px 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    & .quiz-history{
+        background: $colorWhite;
+        border-radius: 10px;
+        padding: 2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & .trophy-img{
+            max-width: 100px;
+        }
+        & .your-score{
+            background: $scoreBg;
+            width: fit-content;
+            padding:.5rem 1rem;
+            color: $colorWhite;
+            margin: 0 auto;
+            border-radius: 15px;
+        }
+        & button{
+            outline: 0;
+                border: 0;
+                border-radius: 30px;
+                padding: 10px 20px;
+                font-size: 16px;
+                min-width: 128px;
+                margin:20px 10px 10px 10px;
+                font-family: inherit;
+                cursor: pointer;
+                &.start-quiz-btn{
+                    background-image: $colorBtn;
+                    color: $colorWhite;
+                }
+                &.see-answer-btn{
+                    border: 1px solid $colorRed;
+                    color: $colorRed;
+                }
+        }
+    }
+}
